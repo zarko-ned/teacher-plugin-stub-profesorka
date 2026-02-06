@@ -1,11 +1,12 @@
 plugins {
     id("java")
+    `maven-publish`
 }
 java {
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17
 }
-group = "raf.rs"
+group = "com.github.zarko-ned"
 version = "1.0.0"
 
 repositories {
@@ -32,3 +33,11 @@ tasks.test {
     useJUnitPlatform()
 }
 
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            from(components["java"])
+        }
+    }
+}
