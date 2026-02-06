@@ -1,6 +1,5 @@
 plugins {
     id("java")
-    id 'maven-publish' // Ovo sam dodao da bih mogao da objavljujem na Maven Central
 }
 java {
     sourceCompatibility = JavaVersion.VERSION_17
