@@ -1,12 +1,13 @@
 plugins {
     id("java")
+    id 'maven-publish' // Ovo sam dodao da bih mogao da objavljujem na Maven Central
 }
 java {
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17
 }
 group = "raf.rs"
-version = "1.0-SNAPSHOT"
+version = "1.0.0"
 
 repositories {
     mavenCentral()
